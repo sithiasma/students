@@ -1,0 +1,18 @@
+<div>
+  <table stye="width:100%">
+    <tr>
+      <th>Name</th>
+      <th>class</th>
+      <th>Sex</th>
+      <th>Mobile</th>
+      <th>Email</th>
+    </tr>
+    <tr ng-repaet= "students in student">
+      <td>{{student.name}}</td>
+      <td>{{student.class}}</td>
+      <td>{{student.sex}}</td>
+      <td>{{student.mobile}}</td>
+      <td>{{student.email}}</td>
+    </tr>
+    <a href = "#/add"><input type= "button" class= "btn" value = "NEW" ng-click ="new()"/></a>
+  </div>

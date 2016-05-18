@@ -1,0 +1,28 @@
+body{
+  background-color: lightblue;
+  align-content: center;
+}
+
+table{
+  border: solid red 1px;
+  align:center;
+}
+
+form{
+  color:blue
+  font:25px/1.5 Arial;
+}
+
+.btn{
+  font:inherit;
+    font-size:20px;
+    cursor:pointer;
+    border:none;
+    display:block;
+    background-color:#89bde5;
+    color:#fff;
+    text-align:center;
+    padding:22px 0;
+    border-radius: 3px;
+    box-shadow:0 1px 1px #ddd, 0 0 20px #84b8e0 inset;
+}
