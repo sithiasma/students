@@ -1,21 +1,21 @@
-var myApp = angular.module("myAPP",['ngRoute']);
+var myApp = angular.module("myApp",['ngRoute']);
 
-myApp.config(function($routeProvider){
-  $routeProvider
-           .when('/home',{
-             templateUrl: 'home.html',
+myApp.config(function($routeProvider)  {
+  $routeProvider.
+           when('/home',{
+             templateUrl: 'templates/home.html',
              controller: 'studentCtrl'
-           })
-           .when('/add',{
-             templateUrl: 'add.html',
-             controller: 'studentCtrl'
-           })
-           .otherwise({
+           }).
+           when('/add',{
+             templateUrl: 'templates/add.html',
+             controller: 'formCtrl'
+           }).
+           otherwise({
              redirectTo: '/home'
            });
   });
 
-myApp.controller('studentCtrl',function(scope){
+myApp.controller('formCtrl',function(scope){
   $scope.students =[];
   $scope.student = {name:"",class:"",sex:"",mobile:"",email:""};
 
@@ -29,5 +29,10 @@ myApp.controller('studentCtrl',function(scope){
 function reset(){
   $scope.student = {name:"",class:"",sex:"",mobile:"",email:""};
 }
-  
+
+});
+
+myApp.controller('studentCtrl',function(scope){
+  var student = window.localStorage.getItem("students");
+  $scope.students = JSON.parse(student);
 });
