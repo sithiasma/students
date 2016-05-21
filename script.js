@@ -8,16 +8,22 @@ myApp.config(function($routeProvider) {
     }).
     when('/add', {
         templateUrl: 'add.html',
-        controller: 'formCtrl'
+        controller: 'studentCtrl'
     }).
     otherwise({
         redirectTo: '/home'
     });
 });
 
-myApp.controller('formCtrl', function($scope) {
+myApp.controller('studentCtrl', function($scope) {
     $scope.students = [];
-    reset();
+    $scope.student= {
+      name: "",
+      class: "",
+      sex: "",
+      mobile:"",
+      email: ""
+    };
 
     $scope.add = function() {
         $scope.students.push($scope.student);
@@ -34,13 +40,8 @@ myApp.controller('formCtrl', function($scope) {
             mobile: "",
             email: ""
         };
-				var students = window.localStorage.getItem("students");
-				$scope.students = JSON.parse(students);
-    }
+				    }
 
-});
-
-myApp.controller('studentCtrl', function($scope) {
-    var students = window.localStorage.getItem("students");
+  var students = window.localStorage.getItem("students");
     $scope.students = JSON.parse(students);
 });
