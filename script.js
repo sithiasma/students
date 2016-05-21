@@ -17,13 +17,7 @@ myApp.config(function($routeProvider) {
 
 myApp.controller('studentCtrl', function($scope) {
     $scope.students = [];
-    $scope.student= {
-      name: "",
-      class: "",
-      sex: "",
-      mobile:"",
-      email: ""
-    };
+    reset();
 
     $scope.add = function() {
         $scope.students.push($scope.student);
@@ -42,6 +36,9 @@ myApp.controller('studentCtrl', function($scope) {
         };
 				    }
 
-  var students = window.localStorage.getItem("students");
-    $scope.students = JSON.parse(students);
+            var students = window.localStorage.getItem("students");
+          	if ( students !== null ) {
+          		$scope.students = JSON.parse(students);
+          	}
+  console.log("End of contorller");
 });
