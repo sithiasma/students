@@ -1,6 +1,6 @@
-myApp.controller('addctrl', function($scope){
+myApp.controller('addctrl', function($scope,display){
     reset();
-    $scope.students=display.getData();
+    $scope.students = display.getData();
   $scope.add = function(){
     $scope.student.push($scope.students);
     window.localStorage.setItem('students',JSON.stringify($scope.students));
