@@ -4,5 +4,11 @@ myApp.service('display', function(){
     if(students!==null){
       students=JSON.parse(students);
     }
-};
+    else {
+        stundents=[];
+      }
+
+
+    return students;
+    };
   });
