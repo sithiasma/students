@@ -1,8 +1,8 @@
 myApp.service('display', function(){
+  this.getData = function(){
   var students = window.localStorage.getItem('students');
-  this.show = function(){
     if(students!==null){
-      $scope.students=JSON.parse(students);
+      students=JSON.parse(students);
     }
-  };
+};
   });

@@ -1,3 +1,3 @@
 myApp.controller('viewctrl', function($scope,display){
-  $scope.students=display.show();
+  $scope.students = display.getData;
 });
