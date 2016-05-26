@@ -1,5 +1,6 @@
-<div ng-controller="addctrl">
-  <form>
+<div class="container" ng-controller="addctrl">
+  <h2>Student form</h2>
+  <form class="form-horizontal" role="form">
     <div class="form-group row">
       <label for="name" class="col-sm-2 form-control-label">NAME</label>
       <div class="col-sm-4">
@@ -16,11 +17,11 @@
       <label class="col-sm-2">SEX</label>
       <div class="col-sm-2">
         <div class="radio">
-          <label>
-            <input type="radio" name="gridRadios" id="gridRadios1" ng-model="student.sex" value="MALE" checked>MALE
+          <label class="active">
+            <input type="radio" name="gridRadios" id="gridRadios1" ng-model="student.sex" value="MALE" checked="checked">Male
           </label>
           <label>
-            <input type="radio" name="gridRadios" id="gridRadios2"ng-model="student.sex" value="FEMALE">FEMALE
+            <input type="radio" name="gridRadios" id="gridRadios2" ng-model="student.sex" value="FEMALE">Female
           </label>
       </div>
     </div>

@@ -1,19 +1,20 @@
-myApp.controller('addctrl', function($scope,display){
+myApp.controller('addctrl', function($scope, display) {
+  reset();
+  $scope.students = display.getData();
+  $scope.add = function() {
+    $scope.students.push($scope.student);
+    window.localStorage.setItem('students', JSON.stringify($scope.students));
+    alert("Save successful!");
     reset();
-    $scope.students = display.getData();
-  $scope.add = function(){
-    $scope.student.push($scope.students);
-    window.localStorage.setItem('students',JSON.stringify($scope.students));
-    alert(saved);
-    reset();
-    };
-  function reset(){
+  };
+
+  function reset() {
     $scope.student = {
-      name:"",
-      class:"",
-      sex:"",
-      mobile:"",
-      email:""
+      name: "",
+      class: "",
+      sex: "",
+      mobile: "",
+      email: ""
     };
-    }
+  }
 });
