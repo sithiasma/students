@@ -18,8 +18,3 @@ myApp.controller('addctrl', function($scope, display) {
     };
   }
 });
-myApp.directive('myimage', function(){
-  return{
-    templateUrl: 'myimage.html'
-  };
-});
