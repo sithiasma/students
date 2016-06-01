@@ -35,29 +35,23 @@
     <div class="form-group row">
       <label for="email" class="col-sm-2 form-control-label">E-MAIL</label>
       <div class="col-sm-4">
-        <input type="email" class="form-control" id="inputEmail3" ng-model="student.email" placeholder="email">
+        <input type="email" class="form-control" id="inputEmail3" ng-model="student.email" placeholder="email"><br>
       </div>
     </div>
+    <div class="from-group row">
+      <div class="col-sm-4">
+          <input type="file" ng-file-select="onFileSelect($files)" >
+    <!--  <input type="file" ng-file-select="onFileSelect($files)" multiple> -->
+
+         <b>Preview:</b><br />
+     <i ng-hide="student.imageSrc">No image choosed</i>
+     <img ng-src="{{student.imageSrc}}" /><br/>
+     <b>Progress:</b>
+    <progress value="{{progress}}"></progress><br>
+    </div>
+    </div>
+
         <input type= "button" class="btn btn-primary btn-md  " ng-click="add()" value=ADD><br><br>
 				<a href = "#/view">View</a><br><br>
  </form>
-</div>
-
-
-<div ng-controller="UploadController " class = "container">
-  <form class="form-horizontal" role= "form">
-<div class="from-group row">
-  <div class="col-sm-4">
-      <input type="file" ng-file-select="onFileSelect($files)" >
-<!--  <input type="file" ng-file-select="onFileSelect($files)" multiple> -->
-
-     <b>Preview:</b><br />
- <i ng-hide="imageSrc">No image choosed</i>
- <img ng-src="{{imageSrc}}" /><br/>
- <b>Progress:</b>
-<progress value="{{progress}}"></progress><br>
-<input type ="button" class="btn btn-primary btn-md" ng-click="upload()" value="UPLOAD"><br><br>
-</div>
-</div>
-</form>
 </div>
