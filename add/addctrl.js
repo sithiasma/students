@@ -18,6 +18,8 @@ myApp.controller('addctrl', function($scope, display, fileReader) {
       imageSrc: ""
     };
   }
+
+
   console.log(fileReader);
  $scope.getFile = function () {
      $scope.progress = 0;
