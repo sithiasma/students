@@ -9,7 +9,7 @@
             <th>Sex</th>
             <th>Mobile</th>
             <th>Email</th>
-          
+
         </tr>
 			</thead>
         <tr ng-repeat="student in students">
@@ -18,8 +18,10 @@
             <td>{{student.sex}}</td>
             <td>{{student.mobile}}</td>
             <td>{{student.email}}</td>
+            <td><img src={{image}} width="100px" height="100px" /></td>
         </tr>
     </table>
+		
 		</div>
     		<a href="#/add" class="btn btn-default">Add</a>
 </div>
