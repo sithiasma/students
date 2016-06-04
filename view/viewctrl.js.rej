@@ -1,0 +1,9 @@
+diff a/view/viewctrl.js b/view/viewctrl.js	(rejected hunks)
+@@ -1,3 +1,6 @@
+-myApp.controller('viewctrl', function($scope,display){
++myApp.controller('viewctrl', function($scope, display) {
+   $scope.students = display.getData();
++  var imgData = window.localStorage.getItem("photo") || "";
++
++  $scope.image = JSON.parse(imgData);
+ });

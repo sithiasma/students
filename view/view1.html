@@ -9,27 +9,21 @@
             <th>Sex</th>
             <th>Mobile</th>
             <th>Email</th>
-<<<<<<< HEAD
 						<th>IMAGE</th>
-=======
->>>>>>> 77ae46154400265b0066998e38152301ed14aea1
-
-        </tr>
+       </tr>
 			</thead>
-        <tr ng-repeat="student in students">
+        <tr ng-repeat="student in students" align="center">
             <td>{{student.name}}</td>
             <td>{{student.class}}</td>
             <td>{{student.sex}}</td>
             <td>{{student.mobile}}</td>
             <td>{{student.email}}</td>
-<<<<<<< HEAD
-						<td>{{student.imageSrc}}</td>
-=======
-            <td><img src={{image}} width="100px" height="100px" /></td>
->>>>>>> 77ae46154400265b0066998e38152301ed14aea1
+          <td><img ng-src=" {{student.imageSrc}}" width="100px" height="100px"/></td>
+
         </tr>
     </table>
-		
+
 		</div>
-    		<a href="#/add" class="btn btn-default">Add</a>
+    		<a href="#/add" class="btn btn-primary btn-md  ">Add</a>
+				 <a href="#/view2" class="btn btn-primary btn-md  ">Slide view</a>
 </div>
