@@ -1,29 +1,30 @@
 <div class="container" ng-controller="viewctrl">
 	<h3>Student lists</h3>
 	<div class="table-responsive">
-    <table class="table table-bordered table-hover">
+		<table class="table table-bordered table-hover">
 			<thead>
-        <tr>
-            <th>Name</th>
-            <th>class</th>
-            <th>Sex</th>
-            <th>Mobile</th>
-            <th>Email</th>
-						<th>IMAGE</th>
-       </tr>
+				<tr>
+					<th>Name</th>
+					<th>class</th>
+					<th>Sex</th>
+					<th>Mobile</th>
+					<th>Email</th>
+					<th>IMAGE</th>
+				</tr>
 			</thead>
-        <tr ng-repeat="student in students" align="center">
-            <td>{{student.name}}</td>
-            <td>{{student.class}}</td>
-            <td>{{student.sex}}</td>
-            <td>{{student.mobile}}</td>
-            <td>{{student.email}}</td>
-          <td><img ng-src=" {{student.imageSrc}}" width="100px" height="100px"/></td>
+			<tr ng-repeat="student in students" align="center">
+				<td><a href="#/edit/{{student.name}}">{{student.name}}</a></td>
+				<td>{{student.class}}</td>
+				<td>{{student.sex}}</td>
+				<td>{{student.mobile}}</td>
+				<td>{{student.email}}</td>
+				<td><img ng-src=" {{student.imageSrc}}" width="100px" height="100px" /></td>
 
-        </tr>
-    </table>
+			</tr>
+		</table>
 
-		</div>
-    		<a href="#/add" class="btn btn-primary btn-md  ">Add</a>
-				 <a href="#/view2" class="btn btn-primary btn-md  ">Slide view</a>
+	</div>
+	<a href="#/add" class="btn btn-primary btn-md  ">Add</a>
+	<a href="#/view2" class="btn btn-primary btn-md  ">Slide view</a>
+	<a href="#/show" class="btn btn-primary btn-md  ">Show</a>
 </div>
